@@ -1,37 +1,72 @@
 package jp.co.xxx.learning_support.domain;
 
 public class CompanyMember {
-	
+
+	/** 企業担当者ID */
 	private Integer id;
+	/** 氏名 */
 	private String name;
+	/** かな */
 	private String kana;
-	private String remarks;
-	@Override
-	public String toString() {
-		return "CompanyMember [id=" + id + ", name=" + name + ", kana=" + kana + ", remarks=" + remarks + "]";
-	}
+	/** メールアドレス */
+	private String email;
+	/** パスワード */
+	private String password;
+	/** 企業ID */
+	private Integer companyId;
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getKana() {
 		return kana;
 	}
+
 	public void setKana(String kana) {
 		this.kana = kana;
 	}
-	public String getRemarks() {
-		return remarks;
+
+	public String getEmail() {
+		return email;
 	}
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Integer getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(Integer companyId) {
+		this.companyId = companyId;
+	}
+
+	@Override
+	public String toString() {
+		return "CompanyMember [id=" + id + ", name=" + name + ", kana=" + kana + ", email=" + email + ", password="
+				+ password + ", companyId=" + companyId + "]";
+	}
+
 }
