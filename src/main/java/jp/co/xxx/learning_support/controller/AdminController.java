@@ -21,13 +21,14 @@ public class AdminController {
 	}
 	
 	
-	@RequestMapping("/")
+	@RequestMapping("")
 	public String index() {
 		return "admin/admin_login";
 	}
 	
 	@RequestMapping("show-training-list")
 	public String showTrainingList() {
+		
 		
 		
 		return "admin/admin_training_list";
