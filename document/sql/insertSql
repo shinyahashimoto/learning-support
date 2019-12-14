@@ -1,6 +1,6 @@
 insert into admins(name, kana, email, password, can_show_all_company) values('鈴木亜樹', 'すずきあき', 'suzuki@gmail.com','suzuki', true);
 
-insert into company_members(name, kana, email, password, company_id) values('千田誠之', 'せんだのりゆき', 'company.member@gmail.com','company_member', 1);
+insert into company_members(name, kana, email, password, company_id) values('千田誠之', 'せんだのりゆき', 'senda@gmail.com','company_member', 1);
 
 insert into companies(name, kana, remarks) values('株式会社ラクスパートナーズ ', 'かぶしきかいしゃらくすぱーとなーず', '備考備考');
 
