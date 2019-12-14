@@ -1,13 +1,13 @@
 package jp.co.xxx.learning_support.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class DailyReport {
 
 	/** 日報ID */
 	private Integer id;
 	/** 日付 */
-	private Date date;
+	private LocalDate date;
 	/** 研修ID */
 	private Integer trainingId;
 	/** 受講生ID */
@@ -31,11 +31,11 @@ public class DailyReport {
 		this.id = id;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

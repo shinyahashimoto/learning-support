@@ -1,13 +1,13 @@
 package jp.co.xxx.learning_support.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class WeeklyReport {
 
 	/** 週報ID */
 	private Integer id;
 	/** 週の初めの日 */
-	private Date startDate;
+	private LocalDate startDate;
 	/** 講師名 */
 	private String instructorName;
 	/** 内容 */
@@ -21,11 +21,11 @@ public class WeeklyReport {
 		this.id = id;
 	}
 
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 

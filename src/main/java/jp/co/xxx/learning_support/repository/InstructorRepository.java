@@ -22,7 +22,9 @@ public class InstructorRepository {
 		return instructor;
 	};
 
-	
+//	public Instructor findByTraingId(int id) {
+//		String sql = 
+//	}
 	
 	
 }

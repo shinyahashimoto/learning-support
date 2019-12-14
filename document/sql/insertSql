@@ -1,0 +1,24 @@
+insert into admins(name, kana, email, password, can_show_all_company) values('鈴木亜樹', 'すずきあき', 'suzuki@gmail.com','suzuki', true);
+
+insert into company_members(name, kana, email, password, company_id) values('千田誠之', 'せんだのりゆき', 'company.member@gmail.com','company_member', 1);
+
+insert into companies(name, kana, remarks) values('株式会社ラクスパートナーズ ', 'かぶしきかいしゃらくすぱーとなーず', '備考備考');
+
+insert into daily_reports(date, training_id, student_id, content, intelligibility, detail_intelligibillity, about_instructor, question)
+values('2019-1-1', 1, 1,'Javaのaddメソッドについて', 1, 'よくわかりませんでした', 1, 'addメソッドについてもう一度教えてください');
+
+insert into student_impressions(weekly_report_id, student_name, content) values(1, '橋本慎也', 'Javaのオブジェクト指向');
+
+insert into weekly_reports(start_date, instructor_name, content)
+values('2019-1-1', '伊賀将之', 'Javaのオブジェクト指向');
+
+insert into training_student(training_id, student_id) values(1, 1);
+
+insert into students(name, kana, email, password, company_id) values('橋本慎也', 'はしもとしんや', 'shinya@gmail.com','shinya', 1);
+
+insert into trainings(start_date, end_date, name, instructor_id, sub_instructor_id1, sub_instructor_id2, sub_instructor_id3) values('2019-1-1', '2019-2-1', 'Java', 1, 2, 3, 4);
+
+insert into instructors(name, kana, email, password, affiliation, remarks) values('伊賀将之', 'いがまさゆき', 'iga@gmail.com', 'iga', '株式会社伊賀', '備考');
+insert into instructors(name, kana, email, password, affiliation, remarks) values('山本太郎', 'やまもとたろう', 'yamamoto@gmail.com', 'yamamoto', '株式会社山本', '備考');
+insert into instructors(name, kana, email, password, affiliation, remarks) values('高橋太郎', 'たかはしたろう', 'takahashi@gmail.com', 'takahashi', '株式会社高橋', '備考');
+insert into instructors(name, kana, email, password, affiliation, remarks) values('中村太郎', 'なかむらたろう', 'nakamura@gmail.com', 'nakamura', '株式会社中村', '備考');
