@@ -1,10 +1,21 @@
 package jp.co.xxx.learning_support.repository;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import jp.co.xxx.learning_support.domain.Instructor;
+import jp.co.xxx.learning_support.domain.WeeklyReport;
 
+/**
+ * 講師情報を操作するリポジトリクラス.
+ * 
+ * @author hiraokayuri
+ *
+ */
+@Repository
 public class InstructorRepository {
 
 	private NamedParameterJdbcTemplate template;
@@ -21,10 +32,18 @@ public class InstructorRepository {
 		
 		return instructor;
 	};
-
-//	public Instructor findByTraingId(int id) {
-//		String sql = 
-//	}
 	
+	
+	
+	
+	/**
+	 * 自分の週報情報を全権検索する.
+	 * @return
+	 */
+	public List<Instructor> findAll(){
+		return null;
+	}
+
+
 	
 }
