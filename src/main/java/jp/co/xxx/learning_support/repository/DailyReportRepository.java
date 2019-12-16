@@ -1,5 +1,6 @@
 package jp.co.xxx.learning_support.repository;
 
+import java.time.ZoneId;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
 
 import jp.co.xxx.learning_support.domain.DailyReport;
 
@@ -17,12 +19,14 @@ import jp.co.xxx.learning_support.domain.DailyReport;
  * @author hiraokayuri
  *
  */
+@Repository
 public class DailyReportRepository {
 	
 	private static final RowMapper<DailyReport>DAILYREPORT_ROW_MAPPER = (rs,i)->{
 	DailyReport dailyReport = new DailyReport();
 	dailyReport.setId(rs.getInt("id"));
-//	dailyReport.setDate(rs.getDate("date"));
+	//サーバー上のdate方をlocalDate型に変換する
+	dailyReport.setDate(rs.getDate("date").toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 	dailyReport.setTrainingId(rs.getInt("training_id"));
 	dailyReport.setStudentId(rs.getInt("student_id"));
 	dailyReport.setContent(rs.getString("content"));

@@ -2,6 +2,12 @@ package jp.co.xxx.learning_support.domain;
 
 import java.time.LocalDate;
 
+/**
+ * 日報情報のドメインクラス.
+ * 
+ * @author hiraokayuri
+ *
+ */
 public class DailyReport {
 
 	/** 日報ID */
