@@ -1,5 +1,7 @@
 package jp.co.xxx.learning_support.domain;
 
+import java.util.List;
+
 public class Student {
 
 	/** 受講生ID */
@@ -14,6 +16,26 @@ public class Student {
 	private String password;
 	/** 企業ID */
 	private Integer companyId;
+	/** 研修リスト */
+	private List<Training> trainignList;
+	/** 企業 */
+	private Company company;
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public List<Training> getTrainignList() {
+		return trainignList;
+	}
+
+	public void setTrainignList(List<Training> trainignList) {
+		this.trainignList = trainignList;
+	}
 
 	public Integer getId() {
 		return id;
@@ -66,7 +88,6 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", kana=" + kana + ", email=" + email + ", password=" + password
-				+ ", companyId=" + companyId + "]";
+				+ ", companyId=" + companyId + ", trainignList=" + trainignList + ", company=" + company + "]";
 	}
-
 }

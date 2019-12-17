@@ -24,8 +24,8 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="admin_login.html"> <!-- 企業ロゴ -->
-						<img alt="main log" src="../img/header_logo.png">
+					<a class="navbar-brand" th:href="admin_login.html"> <!-- 企業ロゴ -->
+						<img alt="main log" th:src="@{img/header_logo.png}">
 					</a>
 				</div>
 
@@ -51,9 +51,9 @@
 			<div
 				class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-10 col-xs-12">
 				<div class="well">
-					<form method="post" action="register_daily_report.html">
+					<form method="post" th:action="@{/registerDaily}" th:object="${DailyReportForm}">
 						<fieldset>
-							<legend>○月○日の日報を入力してください</legend>
+							<legend><span th:text="${date}">の日報を入力してください</span></legend>
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-12">
@@ -68,23 +68,23 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-12">
-										<label for="inputEmail">本日の理解度</label> <label
-											class="control-label" style="color: red" for="inputEmail">本日の理解度を選択してください</label>
+										<label for="intelligibility">本日の理解度</label> <label
+											class="control-label" style="color: red" for="intelligibility" >本日の理解度を選択してください</label>
 										<div class="col-sm-12">
 											<label class="radio-inline"> <input type="radio"
-												name="inputTodaysIntelligibility" checked="checked">良く理解できた
+												name="intelligibility" th:value="1" th:field="*{intelligibility}">良く理解できた
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="inputTodaysIntelligibility">概ね理解できた
+												name="intelligibility" th:value="2" th:field="*{intelligibility}">概ね理解できた
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="inputTodaysIntelligibility">普通
+												name="intelligibility" th:value="3" th:field="*{intelligibility}">普通
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="inputTodaysIntelligibility">少し難しかった
+												name="intelligibility" th:value="4" th:field="*{intelligibility}">少し難しかった
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="inputTodaysIntelligibility">とても難しかった
+												name="intelligibility" th:value="5" th:field="*{intelligibility}">とても難しかった
 											</label>
 										</div>
 									</div>
@@ -103,23 +103,23 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-12">
-										<label for="inputEmail">講師の対応の丁寧さ</label> <label
-											class="control-label" style="color: red" for="inputEmail">講師の対応の丁寧さを選択してください</label>
+										<label for="aboutInstructor">講師の対応の丁寧さ</label> <label
+											class="control-label" style="color: red" for="aboutInstructor">講師の対応の丁寧さを選択してください</label>
 										<div class="col-sm-12">
 											<label class="radio-inline"> <input type="radio"
-												name="civility" checked="checked">とても丁寧だった
+												name="aboutInstructor" th:value="1" th:field="*{aboutInstructor}">とても丁寧だった
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="civility">概ね丁寧だった
+												name="aboutInstructor" th:value="2"  th:field="*{aboutInstructor}">概ね丁寧だった
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="civility">どちらともいえない
+												name="aboutInstructor" th:value="3"  th:field="*{aboutInstructor}">どちらともいえない
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="civility">やや丁寧ではなかった
+												name="aboutInstructor" th:value="4"  th:field="*{aboutInstructor}">やや丁寧ではなかった
 											</label><br/>
 											<label class="radio-inline"> <input type="radio"
-												name="civility">全く丁寧ではなかった
+												name="aboutInstructor" th:value="5"  th:field="*{aboutInstructor}">全く丁寧ではなかった
 											</label>
 										</div>
 									</div>

@@ -24,10 +24,14 @@ public class DailyReport {
 	private Integer intelligibility;
 	/** 理解度詳細 */
 	private String detailIntelligibility;
-	/** 講師 */
+	/** 講師について */
 	private Integer aboutInstructor;
 	/** 質問 */
 	private String question;
+	/** 研修 */
+	private Training training;
+	/** 受講生 */
+	private Student student;
 
 	public Integer getId() {
 		return id;
@@ -101,11 +105,28 @@ public class DailyReport {
 		this.question = question;
 	}
 
+	public Training getTraining() {
+		return training;
+	}
+
+	public void setTraining(Training training) {
+		this.training = training;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
 	@Override
 	public String toString() {
 		return "DailyReport [id=" + id + ", date=" + date + ", trainingId=" + trainingId + ", studentId=" + studentId
 				+ ", content=" + content + ", intelligibility=" + intelligibility + ", detailIntelligibility="
-				+ detailIntelligibility + ", aboutInstructor=" + aboutInstructor + ", question=" + question + "]";
+				+ detailIntelligibility + ", aboutInstructor=" + aboutInstructor + ", question=" + question
+				+ ", training=" + training + ", student=" + student + "]";
 	}
 
 }

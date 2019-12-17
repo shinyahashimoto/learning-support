@@ -25,10 +25,17 @@ public class DailyReportForm {
 	public Integer getIntTrainingId() {
 		return Integer.parseInt(trainingId);
 	}
+	public Integer getIntStudentId() {
+		return Integer.parseInt(studentId);
+	}
 
 	public Integer getIntAboutInstructo() {
 		return Integer.parseInt(aboutInstructor);
 	}
+	public Integer getIntIntelligibility() {
+		return Integer.parseInt(intelligibility);
+	}
+	
 
 	public String getTrainingId() {
 		return trainingId;
