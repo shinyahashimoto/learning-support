@@ -12,7 +12,7 @@ drop table if exists admins cascade;
 create table admins (
   id serial
   , name varchar(50) not null
-  , kana varchar(50) not null
+  , kana varchar(50)
   , email varchar(50) not null unique
   , password varchar(100) not null
   , can_show_all_company boolean
@@ -25,7 +25,7 @@ drop table if exists company_members cascade;
 create table company_members (
   id serial
   , name varchar(50) not null
-  , kana varchar(50) not null
+  , kana varchar(50)
   , email varchar(50) not null unique
   , password varchar(100) not null
   , company_id integer not null
@@ -38,7 +38,7 @@ drop table if exists companies cascade;
 create table companies (
   id serial
   , name varchar(50) not null
-  , kana varchar(100) not null
+  , kana varchar(100)
   , remarks text
   , constraint companies_PKC primary key (id)
 ) ;
@@ -94,7 +94,7 @@ drop table if exists students cascade;
 create table students (
   id serial
   , name varchar(50) not null
-  , kana varchar(50) not null
+  , kana varchar(50)
   , email varchar(50) not null unique
   , password varchar(100) not null
   , company_id integer not null
@@ -123,7 +123,7 @@ drop table if exists instructors cascade;
 create table instructors (
   id serial
   , name varchar(50) not null
-  , kana varchar(50) not null
+  , kana varchar(50) 
   , email varchar(50) not null unique
   , password varchar(100) not null
   , affiliation varchar(50) not null

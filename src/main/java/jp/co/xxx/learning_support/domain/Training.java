@@ -1,6 +1,7 @@
 package jp.co.xxx.learning_support.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class Training {
 
@@ -20,6 +21,10 @@ public class Training {
 	private Integer subInstructorId2;
 	/** サブ講師ID3 */
 	private Integer subInstructorId3;
+	/** 受講生リスト */
+	private List<Student> studentList;
+	/** 週報リスト */
+	private List<WeeklyReport> weeklyReportList;
 
 	public Integer getId() {
 		return id;
@@ -85,11 +90,27 @@ public class Training {
 		this.subInstructorId3 = subInstructorId3;
 	}
 
+	public List<Student> getStudentList() {
+		return studentList;
+	}
+
+	public void setStudentList(List<Student> studentList) {
+		this.studentList = studentList;
+	}
+
+	public List<WeeklyReport> getWeeklyReportList() {
+		return weeklyReportList;
+	}
+
+	public void setWeeklyReportList(List<WeeklyReport> weeklyReportList) {
+		this.weeklyReportList = weeklyReportList;
+	}
+
 	@Override
 	public String toString() {
 		return "Training [id=" + id + ", startDate=" + startDate + ", endDate=" + endDate + ", name=" + name
 				+ ", instructorId=" + instructorId + ", subInstructorId1=" + subInstructorId1 + ", subInstructorId2="
-				+ subInstructorId2 + ", subInstructorId3=" + subInstructorId3 + "]";
+				+ subInstructorId2 + ", subInstructorId3=" + subInstructorId3 + ", studentList=" + studentList
+				+ ", weeklyReportList=" + weeklyReportList + "]";
 	}
-
 }
