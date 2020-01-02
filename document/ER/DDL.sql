@@ -37,7 +37,7 @@ drop table if exists companies cascade;
 
 create table companies (
   id serial
-  , name varchar(50) not null
+  , name varchar(50) not null unique
   , kana varchar(100)
   , remarks text
   , constraint companies_PKC primary key (id)
