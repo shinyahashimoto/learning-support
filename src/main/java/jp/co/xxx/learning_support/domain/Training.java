@@ -21,6 +21,14 @@ public class Training {
 	private Integer subInstructorId2;
 	/** サブ講師ID3 */
 	private Integer subInstructorId3;
+	/** 講師 */
+	private Instructor instructor;
+	/** サブ講師1 */
+	private Instructor subInstructor1;
+	/** サブ講師2 */
+	private Instructor subInstructor2;
+	/** サブ講師3 */
+	private Instructor subInstructor3;
 	/** 受講生リスト */
 	private List<Student> studentList;
 	/** 週報リスト */
@@ -90,6 +98,38 @@ public class Training {
 		this.subInstructorId3 = subInstructorId3;
 	}
 
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
+	}
+
+	public Instructor getSubInstructor1() {
+		return subInstructor1;
+	}
+
+	public void setSubInstructor1(Instructor subInstructor1) {
+		this.subInstructor1 = subInstructor1;
+	}
+
+	public Instructor getSubInstructor2() {
+		return subInstructor2;
+	}
+
+	public void setSubInstructor2(Instructor subInstructor2) {
+		this.subInstructor2 = subInstructor2;
+	}
+
+	public Instructor getSubInstructor3() {
+		return subInstructor3;
+	}
+
+	public void setSubInstructor3(Instructor subInstructor3) {
+		this.subInstructor3 = subInstructor3;
+	}
+
 	public List<Student> getStudentList() {
 		return studentList;
 	}
@@ -110,7 +150,9 @@ public class Training {
 	public String toString() {
 		return "Training [id=" + id + ", startDate=" + startDate + ", endDate=" + endDate + ", name=" + name
 				+ ", instructorId=" + instructorId + ", subInstructorId1=" + subInstructorId1 + ", subInstructorId2="
-				+ subInstructorId2 + ", subInstructorId3=" + subInstructorId3 + ", studentList=" + studentList
-				+ ", weeklyReportList=" + weeklyReportList + "]";
+				+ subInstructorId2 + ", subInstructorId3=" + subInstructorId3 + ", subInstructor1=" + subInstructor1
+				+ ", instructor=" + instructor + ", subInstructor2=" + subInstructor2 + ", subInstructor3="
+				+ subInstructor3 + ", studentList=" + studentList + ", weeklyReportList=" + weeklyReportList + "]";
 	}
+
 }
