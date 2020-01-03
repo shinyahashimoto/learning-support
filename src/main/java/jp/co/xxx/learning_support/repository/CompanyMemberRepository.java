@@ -56,4 +56,11 @@ public class CompanyMemberRepository {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(companyMember);
 		template.update(sql, param);
 	}
+	
+	public void save(CompanyMember companyMember) {
+		String sql = "UPDATE company_members SET password = :password where email = :email";
+		SqlParameterSource param = new BeanPropertySqlParameterSource(companyMember);
+		template.update(sql, param);	
+	}
+	
 }
