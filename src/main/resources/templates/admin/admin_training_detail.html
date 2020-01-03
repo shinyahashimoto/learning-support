@@ -53,7 +53,7 @@
 				class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-sm-10 col-xs-12">
 				<!-- 背景をグレーに、埋め込んだようなコンポーネント -->
 				<div class="well">
-					<form method="post" action="admin_training_list.html">
+					<form method="post" action="admin_training_list.html" th:action="@{/admin/registerTraining}" th:object="${trainingForm}">
 						<fieldset>
 							<legend>研修管理 </legend>
 							<div class="form-group">
@@ -61,7 +61,7 @@
 									<div class="col-sm-12">
 										<label for="inputCourse">コース名:</label> <label
 											class="control-label" style="color: red" for="inputError">コース名を入力してください</label>
-										<input type="text" id="inputCourse" class="form-control">
+										<input type="text" id="inputCourse" class="form-control" th:field="*{name}">
 									</div>
 								</div>
 							</div>
@@ -73,12 +73,12 @@
 									</div>
 									<div class="col-sm-5">
 										<input type="date" name="name" id="name"
-											class="form-control input-sm" />
+											class="form-control input-sm" th:field="*{startDate}">
 									</div>
 									<label for="continent" class="control-label col-sm-1">～</label>
 									<div class="col-sm-5">
 										<input type="date" name="continent" id="continent"
-											class="form-control input-sm" />
+											class="form-control input-sm" th:field="*{endDate}">
 									</div>
 								</div>
 							</div>
@@ -87,11 +87,8 @@
 									<div class="col-sm-12">
 										<label for="inputLecturer">メイン講師:</label> <label
 											class="control-label" style="color: red" for="inputError">メイン講師を選択してください</label>
-										<select name="area" class="form-control">
-											<option value="0">選択してください</option>
-											<option value="1">メイン講師一郎</option>
-											<option value="2">メイン講師次郎</option>
-											<option value="3">メイン講師三郎</option>
+										<select name="instructorId" class="form-control">
+											<option th:each="instructor : ${instructorList}" th:value="${instructor.id}" th:inline="text">[[${instructor.name}]]</option>
 										</select>
 									</div>
 								</div>
@@ -99,12 +96,9 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-12">
-										<label for="inputLecturer">サブ講師:</label> <select name="area"
+										<label for="inputLecturer">サブ講師:</label> <select name="subInstructorId1"
 											class="form-control">
-											<option value="0">選択してください</option>
-											<option value="1">サブ講師一郎</option>
-											<option value="2">サブ講師次郎</option>
-											<option value="3">サブ講師三郎</option>
+											<option th:each="instructor : ${instructorList}" th:value="${instructor.id}" th:inline="text">[[${instructor.name}]]</option>
 										</select>
 									</div>
 								</div>
@@ -112,12 +106,9 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-12">
-										<label for="inputLecturer">サブ講師:</label> <select name="area"
+										<label for="inputLecturer">サブ講師:</label> <select name="subInstructorId2"
 											class="form-control">
-											<option value="0">選択してください</option>
-											<option value="1">サブ講師一郎</option>
-											<option value="2">サブ講師次郎</option>
-											<option value="3">サブ講師三郎</option>
+											<option th:each="instructor : ${instructorList}" th:value="${instructor.id}" th:inline="text">[[${instructor.name}]]</option>
 										</select>
 									</div>
 								</div>
