@@ -32,7 +32,7 @@ public class RegisterTrainingController {
 	
 	@RequestMapping("/toRegisterTrainingPage")
 	public String toRegisterTrainingPage(Model model) {
-		List<Instructor> instructorList = service.findAll();
+		List<Instructor> instructorList = service.findAllInstructor();
 		
 		//optionのデフォルト値を「選択してください」にしてほしい
 		

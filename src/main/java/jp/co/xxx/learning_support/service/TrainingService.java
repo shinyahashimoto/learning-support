@@ -33,7 +33,11 @@ public class TrainingService {
 		trainingStudentRepository.insert(trainingId, studentId);
 	}
 	
-	public List<Instructor> findAll(){
+	public List<Training> findAllTraining(Integer companyId){
+		return trainingRepository.findAll(companyId);
+	}
+	
+	public List<Instructor> findAllInstructor(){
 		return instructorRepository.findAll();
 	}
 }
