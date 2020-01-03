@@ -1,6 +1,6 @@
 package jp.co.xxx.learning_support.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Training {
@@ -8,9 +8,9 @@ public class Training {
 	/** 研修ID */
 	private Integer id;
 	/** 開始日 */
-	private Date startDate;
+	private LocalDate startDate;
 	/** 終了日 */
-	private Date endDate;
+	private LocalDate endDate;
 	/** 研修名 */
 	private String name;
 	/** 講師ID */
@@ -34,19 +34,19 @@ public class Training {
 		this.id = id;
 	}
 
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 
