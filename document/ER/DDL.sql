@@ -19,6 +19,14 @@ create table admins (
   , constraint admins_PKC primary key (id)
 ) ;
 
+-- 管理者担当企業
+drop table if exists admin_companies cascade;
+
+create table admin_companies (
+  admin_id integer not null
+  , company_id	integer not null
+) ;
+
 -- 企業担当者
 drop table if exists company_members cascade;
 
@@ -74,6 +82,7 @@ drop table if exists weekly_reports cascade;
 
 create table weekly_reports (
   id serial
+  , training_id integer
   , start_date date not null
   , instructor_name varchar(50) not null
   , content text
